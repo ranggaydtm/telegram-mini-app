@@ -21,7 +21,6 @@ export default function Home() {
     }
   }, []);
 
-  console.log(userData);
   return (
     <div className='p-10'>
       {userData ? (
