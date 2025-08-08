@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import { useState } from "react";
@@ -11,7 +10,6 @@ interface TaskFormProps {
 
 export default function TaskForm({ groupId }: TaskFormProps) {
   const [title, setTitle] = useState("");
-  const [error, setError] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -26,10 +24,8 @@ export default function TaskForm({ groupId }: TaskFormProps) {
       });
 
       setTitle("");
-      setError(null);
     } catch (err) {
       console.error("Error adding task:", err);
-      setError("Failed to add task");
     }
   };
 
